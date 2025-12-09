@@ -6,28 +6,48 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BaiTap3Test {
-    BaiTap1 baiTap1;
-    @BeforeEach
-    void setUp(){
-        baiTap1 = new BaiTap1();
-    }
+
+    //Test Tong chan thanh cong
     @Test
-    void TinhTongHam1den1000le(){
-        int expected = 250000;
-        assertEquals(expected, baiTap1.TinhTongHam1den1000le());
+    public void TestTongChanThanhCong() {
+        int expected = 500000;
+        assertEquals(expected, BaiTap1.TinhTongHam1den1000chan());
     }
+    //Test  bien tong chan thanh cong
     @Test
-    void TinhTongHam1den1000le2(){
-        int expected = 500 * (999 + 1) / 2;
-        assertEquals(expected, baiTap1.TinhTongHam1den1000le());
+    public void TestBienTongChanThanhCong() {
+        int expected = 500 * (1000 + 2) / 2;
+        assertEquals(expected, BaiTap1.TinhTongHam1den1000chan());
     }
+
+    //Test Bien thanh cong
     @Test
-    void TinhTongHam1den1000le3(){
+    public void TestBienThanhCong() {
         int a = 500;
         int b = 999;
         int c = 1;
         int d = 2;
         int expected = a * (b + c) / d;
-        assertEquals(expected, baiTap1.TinhTongHam1den1000le());
+        assertEquals(expected, BaiTap1.TinhTongHam1den1000le());
+    }
+
+    //Test On dinh
+    @Test
+    public void TestOnDinh() {
+        int result1 = BaiTap1.TinhTongHam1den1000chan();
+        int result2 = BaiTap1.TinhTongHam1den1000chan();
+        assertEquals(result1, result2);
+    }
+    //Test Max Value
+    @Test
+    public void TestMaxValue() {
+        int result1 = BaiTap1.TinhTongHam1den1000chan();
+        assertTrue(result1 < Integer.MAX_VALUE, "Test failed");
+    }
+    //Test Min Value
+    @Test
+    public void TestMinValue() {
+        int result1 = BaiTap1.TinhTongHam1den1000chan();
+        assertTrue(result1 > Integer.MIN_VALUE, "Test failed");
     }
 }

@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class BaiTap1Test { //le
-@Test
-public void TestTongLeThanhCong(){
+    @Test
+    public void TestTongLeThanhCong(){
     int expected = 250000;
     Assertions.assertEquals(expected, BaiTap1.TinhTongHam1den1000le());
     }
