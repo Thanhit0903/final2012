@@ -6,7 +6,6 @@ public class SoLe {
         for (int i = 1; i <= 1000; i += 2) {
             sum += i;
         }
-
         return sum;
     }
 }
